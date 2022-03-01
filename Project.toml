@@ -1,0 +1,18 @@
+name = "project1"
+uuid = "d8374bdb-ad3f-472c-b51f-03f0a4444109"
+authors = ["John T. Foster <john.foster@utexas.edu>"]
+version = "0.1.0"
+
+[deps]
+
+[compat]
+julia = "1.6"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+ImageQualityIndexes = "2996bd0c-7a13-11e9-2da2-2f5ce47296a9"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+
+[targets]
+test = ["Test", "FileIO", "ImageQualityIndexes", "Images"]
