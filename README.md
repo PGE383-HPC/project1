@@ -32,16 +32,13 @@ where $\sigma, \rho$ and $\beta$ are constants, $x, y$, and $z$ are dependent va
    
    **Hints:**
    
-    * Note that the top two rows and columns of subplots share x and y axis and gridlines.  **DO NOT** set the tick and/or grid lines manually.  Use the plot attribute `link` to "tie" the plots together.
+    * Note that the top two rows and columns of subplots share x and y axis and gridlines (same for the bottom row).  **DO NOT** set the tick and/or grid lines manually.  Use the plot attribute `link` to "tie" the plots together.
     
     * Do not explicitly set the plot line colors or overall figure size, use the defaults.
     
     * Use $\LaTeX$ labels.
     
     * Each row of plots should be 1/3 of the overall figure size, each column should be 1/2 of the overall figure size.
-    
-    * Install any necassary packages to complete the assignment through the
-    pacakge manager.
 
 ## Testing
 
