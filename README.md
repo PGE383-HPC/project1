@@ -5,8 +5,8 @@
 The Lorenz equations show deterministic non-periodic behavior, or chaos.  One aspect of this behavior is the system's sensitive dependence on initial conditions, which has been termed "the butterfly effect" and has been discussed and used in many books and movies.  The Lorenz equations are:
 
 $$
-   \frac{{\rm d}x(t)}{{\rm d}t} = \sigma (y(t) -x(t)) \\
-   \frac{{\rm d}y(t)}{{\rm d}t} = x(t) (\rho - z(t)) - y(t) \\
+   \frac{{\rm d}x(t)}{{\rm d}t} = \sigma (y(t) -x(t)), \\
+   \frac{{\rm d}y(t)}{{\rm d}t} = x(t) (\rho - z(t)) - y(t), \\
    \frac{{\rm d}z(t)}{{\rm d}t} = x(t)y(t) - \beta z(t)
 $$
 
