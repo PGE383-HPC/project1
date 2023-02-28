@@ -4,11 +4,11 @@
 
 The Lorenz equations show deterministic non-periodic behavior, or chaos.  One aspect of this behavior is the system's sensitive dependence on initial conditions, which has been termed "the butterfly effect" and has been discussed and used in many books and movies.  The Lorenz equations are:
 
-\begin{align}
-   \frac{{\rm d}x(t)}{{\rm d}t} &= \sigma (y(t) -x(t)) \\
-   \frac{{\rm d}y(t)}{{\rm d}t} &= x(t) (\rho - z(t)) - y(t) \\
-   \frac{{\rm d}z(t)}{{\rm d}t} &= x(t)y(t) - \beta z(t)
-\end{align}
+$$
+   \frac{{\rm d}x(t)}{{\rm d}t} = \sigma (y(t) -x(t)) \\
+   \frac{{\rm d}y(t)}{{\rm d}t} = x(t) (\rho - z(t)) - y(t) \\
+   \frac{{\rm d}z(t)}{{\rm d}t} = x(t)y(t) - \beta z(t)
+$$
 
 where $\sigma, \rho$ and $\beta$ are constants, $x, y$, and $z$ are dependent variables and $t$ is time.  In this problem you will integrate the Lorenz equations in time for different values of $\rho$ and different initial conditions in order to see the butterfly effect for yourself.
 
