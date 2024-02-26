@@ -2,7 +2,7 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/miniconda
 {
 	"name":  "Julia 1.10",
-  "image": "ghcr.io/pge383-hpc/assignment_name_placeholder/julia-devcontainer:latest",
+  "image": "ghcr.io/pge383-hpc/project1/julia-devcontainer:latest",
   "extensions": [
     "julialang.language-julia"
   ],
