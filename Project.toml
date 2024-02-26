@@ -1,0 +1,21 @@
+name = "project1"
+uuid = "d8374bdb-ad3f-472c-b51f-03f0a4444109"
+authors = ["John T. Foster <john.foster@utexas.edu>"]
+version = "0.1.0"
+
+[deps]
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
+Plots = "91a5bcdd-55d7-5caf-9e0b-520d859cae80"
+
+[extras]
+FileIO = "5789e2e9-d7fb-5bc7-8068-2c6fae9b9549"
+ImageQualityIndexes = "2996bd0c-7a13-11e9-2da2-2f5ce47296a9"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "FileIO", "Images", "ImageQualityIndexes"]
+
+[compat]
+julia = "1.10"
