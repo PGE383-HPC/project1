@@ -1,0 +1,48 @@
+on: 
+  push:
+    branches: [master]
+jobs:
+  test:
+    name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        version:
+          - '1.10'
+        os:
+          - ubuntu-latest
+        arch:
+          - x64
+    steps:
+      - name: "Get assignment name"
+        shell: bash -l {0}
+        run: |
+          echo "ASSIGNMENT=$(echo $GITHUB_REPOSITORY | cut -d/ -f2 | cut -d- -f1)" >> $GITHUB_ENV;
+      - name: "Checkout"
+        uses: actions/checkout@v3
+      - name: "Fetch Tests"
+        shell: bash -l {0}
+        run: |
+          cd test
+          curl \
+          --header 'Authorization: token ${{secrets.PGE383_SECRET_TOKEN}}' \
+          --header 'Accept: application/vnd.github.v3.raw' \
+          -O --location "https://api.github.com/repos/PGE383-HPC/${ASSIGNMENT}-solution/contents/test/runtests.jl"
+      - name: "Fetch Environment"
+        shell: bash -l {0}
+        run: |
+          curl \
+          --header 'Authorization: token ${{secrets.PGE383_SECRET_TOKEN}}' \
+          --header 'Accept: application/vnd.github.v3.raw' \
+          -O --location "https://api.github.com/repos/PGE383-HPC/${ASSIGNMENT}-solution/contents/Project.toml" \
+          -O --location "https://api.github.com/repos/PGE383-HPC/${ASSIGNMENT}-solution/contents/Manifest.toml"
+      - name: "Build and Test"
+        uses: julia-actions/setup-julia@v1
+        with:
+          version: ${{ matrix.version }}
+          arch: ${{ matrix.arch }}
+      - uses: julia-actions/cache@v1
+      - uses: julia-actions/julia-buildpkg@v1
+      - uses: julia-actions/julia-runtest@v1
