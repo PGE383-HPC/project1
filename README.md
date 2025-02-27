@@ -1,6 +1,6 @@
 # Project 1
 
-![Project 1](https://github.com/PGE383-HPC/project1-solution/actions/workflows/main.yml/badge.svg)
+![Project 1](https://github.com/PGE383-HPC/project1/actions/workflows/main.yml/badge.svg)
 
 The Lorenz equations show deterministic non-periodic behavior, or chaos.  One aspect of this behavior is the system's sensitive dependence on initial conditions, which has been termed "the butterfly effect", and has been discussed and used in many books and movies.  The Lorenz equations are:
 
